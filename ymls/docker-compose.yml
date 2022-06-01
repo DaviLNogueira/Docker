@@ -14,6 +14,8 @@ services:
     ports: #quais portas deve executar no container e maquina
       - 3000:3000
 
+    depends_on: #faz com que gere um dependência até o container estiver pronto
+      - mongodb
 networks:
   compose-bridge: #criação da rede que será comunicada
     driver: bridge
